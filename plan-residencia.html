@@ -1,0 +1,1147 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan de estudio · Residencias Médicas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2f1ec; --card:#ffffff; --card-soft:#f7f6f1;
+    --ink:#14201c; --ink-soft:#57655d; --ink-faint:#8b948d;
+    --line:#e1dfd7; --line-soft:#ebe9e2;
+    --teal:#0f7168; --teal-deep:#0b4f49; --teal-wash:rgba(15,113,104,.09);
+    --coral:#e2683f; --pulse:#c4432e;
+    --shadow:0 1px 2px rgba(20,32,28,.05),0 10px 28px rgba(20,32,28,.06);
+    --radius:16px; --radius-sm:10px;
+    color-scheme: light;
+  }
+  :root[data-theme="dark"], :root:not([data-theme="light"]) {}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0e1513; --card:#151f1c; --card-soft:#182420;
+      --ink:#eaf2ee; --ink-soft:#a7b6ae; --ink-faint:#6d7c74;
+      --line:#233330; --line-soft:#1c2a26;
+      --teal:#2dbfae; --teal-deep:#7fe0d2; --teal-wash:rgba(45,191,174,.13);
+      --coral:#f0895f; --pulse:#ff6b54;
+      --shadow:0 1px 2px rgba(0,0,0,.25),0 10px 30px rgba(0,0,0,.35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1513; --card:#151f1c; --card-soft:#182420;
+    --ink:#eaf2ee; --ink-soft:#a7b6ae; --ink-faint:#6d7c74;
+    --line:#233330; --line-soft:#1c2a26;
+    --teal:#2dbfae; --teal-deep:#7fe0d2; --teal-wash:rgba(45,191,174,.13);
+    --coral:#f0895f; --pulse:#ff6b54;
+    --shadow:0 1px 2px rgba(0,0,0,.25),0 10px 30px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;width:100%;overflow-x:hidden}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Public Sans",system-ui,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;
+    width:100%;max-width:100%;overflow-x:hidden;
+    padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    transition:background .2s ease,color .2s ease;
+  }
+  .wrap{width:100%;max-width:840px;margin:0 auto;padding:0 16px 90px}
+
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);padding:12px 16px;margin:0 -16px 22px}
+  .topbar-in{max-width:840px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:15px;flex:0 0 auto;
+    display:flex;align-items:center;gap:8px;color:var(--ink)}
+  .brand .dotmark{width:8px;height:8px;border-radius:50%;background:var(--pulse);flex:0 0 auto}
+  nav.tabs{display:flex;gap:2px;background:var(--card-soft);border:1px solid var(--line);
+    border-radius:999px;padding:3px;margin-left:auto}
+  .tab{font-family:"Public Sans";font-size:12.5px;font-weight:600;color:var(--ink-soft);
+    background:none;border:none;border-radius:999px;padding:7px 13px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;transition:.15s}
+  .tab.active{background:var(--teal);color:#fff}
+  .iconbtn{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
+    background:var(--card-soft);display:grid;place-items:center;cursor:pointer;color:var(--ink-soft);
+    -webkit-tap-highlight-color:transparent}
+  .iconbtn:hover{color:var(--teal);border-color:var(--teal)}
+  /* barra responsive: en pantallas chicas la marca desaparece y las pestañas se achican */
+  @media (max-width:560px){
+    .topbar-in{gap:8px}
+    .blabel{display:none}
+    nav.tabs{margin-left:0}
+    #themeBtn{margin-left:auto}
+    .tab{padding:7px 11px;font-size:12px}
+    .iconbtn{width:32px;height:32px}
+  }
+  @media (max-width:360px){
+    .tab{padding:6px 9px;font-size:11.5px}
+  }
+
+  header.hero-head{margin:20px 4px 18px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--teal);font-weight:600;margin:0 0 6px}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(26px,6vw,36px);
+    line-height:1.05;letter-spacing:-.01em;margin:0 0 4px}
+  h1 em{font-style:italic;color:var(--teal-deep)}
+  .sub{color:var(--ink-soft);font-size:14px;margin:0;max-width:56ch}
+  .view{display:none}
+  .view.active{display:block;animation:fadein .25s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* ---- Dashboard ---- */
+  .hero{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:22px 22px 0;overflow:hidden;margin-bottom:16px}
+  .hero-row{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
+  .hero-pct{font-family:"Fraunces",serif;font-size:clamp(46px,12vw,72px);font-weight:600;line-height:.85;color:var(--ink)}
+  .hero-pct sup{font-size:.36em;font-weight:600;color:var(--teal);vertical-align:super;margin-left:1px}
+  .hero-pctlabel{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-faint);margin-top:8px}
+  .hero-badges{display:flex;flex-direction:column;gap:7px;margin-left:auto;align-items:flex-end}
+  .hero-badge{font-size:12.5px;color:var(--ink-soft);background:var(--card-soft);
+    border:1px solid var(--line);border-radius:999px;padding:5px 13px;white-space:nowrap}
+  .hero-badge b{color:var(--ink);font-family:"Fraunces",serif;font-weight:600}
+  .hero-badge.week{color:var(--coral);background:rgba(226,104,63,.09);border-color:rgba(226,104,63,.22);
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.02em}
+  .hero-ecg-wrap{margin:14px -22px 0;height:104px;position:relative}
+  .hero-ecg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero-ecg path{fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+    vector-effect:non-scaling-stroke}
+  .hero-ecg .base{stroke:var(--line)}
+  .hero-ecg .fill{stroke:var(--pulse);filter:drop-shadow(0 0 5px rgba(196,67,46,.28));
+    transition:stroke-dashoffset 1.2s cubic-bezier(.4,.7,.3,1)}
+  .hero-ecg .blip{fill:var(--pulse);filter:drop-shadow(0 0 6px rgba(196,67,46,.5));
+    transition:cx 1.2s cubic-bezier(.4,.7,.3,1),cy 1.2s cubic-bezier(.4,.7,.3,1),opacity .4s ease}
+  @media (max-width:480px){ .hero-badges{margin-left:0;align-items:flex-start;flex-direction:row;flex-wrap:wrap} }
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+    padding:13px 14px;box-shadow:var(--shadow)}
+  .tile .tval{font-family:"Fraunces",serif;font-size:22px;font-weight:600;line-height:1}
+  .tile .tlab{font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:16px 18px;margin-bottom:14px}
+  .panel h2{font-family:"Fraunces",serif;font-size:16px;font-weight:600;margin:0 0 12px;
+    display:flex;align-items:center;gap:8px}
+  .panel h2 .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+    letter-spacing:.06em;color:var(--teal);background:var(--teal-wash);border-radius:6px;padding:2px 7px}
+
+  .weekrow-mini{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line-soft)}
+  .weekrow-mini:first-of-type{border-top:none}
+  .weekrow-mini .wm-num{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);width:16px}
+  .weekrow-mini .wm-title{flex:1;font-size:14.5px}
+  .weekrow-mini .wm-check{width:18px;height:18px;border-radius:6px;border:1.6px solid var(--line);
+    background:var(--card);cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+  .weekrow-mini.done .wm-check{background:var(--teal);border-color:var(--teal)}
+  .weekrow-mini.done .wm-title{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--line)}
+
+  .discbars{display:flex;flex-direction:column;gap:11px}
+  .dbar-row{display:flex;align-items:center;gap:10px}
+  .dbar-name{font-size:12.5px;color:var(--ink-soft);width:150px;flex:0 0 auto;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .dbar-track{flex:1;height:7px;border-radius:4px;background:var(--line-soft);overflow:hidden}
+  .dbar-fill{height:100%;border-radius:4px;transition:width .4s ease}
+  .dbar-pct{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);width:32px;text-align:right}
+
+  /* Legend */
+  .legend{display:flex;gap:7px 8px;flex-wrap:wrap;margin:0 4px 16px}
+  .lg{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);
+    font-family:inherit;background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:5px 12px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:.14s}
+  .lg:hover{border-color:var(--teal);color:var(--teal-deep);background:var(--teal-wash)}
+  .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .week.flash{animation:flashwk .9s ease}
+  @keyframes flashwk{0%,100%{box-shadow:var(--shadow)}
+    30%{box-shadow:0 0 0 3px var(--teal-wash),var(--shadow)}}
+
+  /* Week card (Plan) */
+  .week{position:relative;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+  .week::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--wk,#ccc)}
+  .whead{display:flex;align-items:center;gap:14px;padding:15px 16px 15px 20px;
+    cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+  .wnum{font-family:"Fraunces",serif;font-weight:600;font-size:15px;color:var(--wk);
+    line-height:1;flex:0 0 auto;min-width:60px}
+  .wnum small{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+    letter-spacing:.14em;color:var(--ink-faint);margin-top:3px;font-weight:500}
+  .wtitle{flex:1;min-width:0}
+  .wdisc{font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .wcount{font-size:12.5px;color:var(--ink-faint);margin-top:1px}
+  .wprog{flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-size:11px;
+    color:var(--ink-faint);display:flex;align-items:center;gap:7px}
+  .mini{width:34px;height:5px;border-radius:3px;background:var(--line);overflow:hidden}
+  .mini i{display:block;height:100%;background:var(--wk);width:0;transition:width .35s ease}
+  .chev{flex:0 0 auto;color:var(--ink-faint);transition:transform .28s ease}
+  .week.open .chev{transform:rotate(90deg)}
+
+  .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+  .week.open .body{grid-template-rows:1fr}
+  .body>div{overflow:hidden}
+  .topics{padding:2px 16px 14px}
+
+  /* Topic */
+  .topic{border-top:1px solid var(--line);padding:13px 2px 3px}
+  .trow{display:flex;align-items:flex-start;gap:12px}
+  .check{flex:0 0 auto;width:22px;height:22px;border-radius:7px;border:1.8px solid var(--line);
+    background:var(--card);margin-top:1px;cursor:pointer;display:grid;place-items:center;
+    transition:.15s;-webkit-tap-highlight-color:transparent}
+  .check:hover{border-color:var(--teal)}
+  .check svg{opacity:0;transform:scale(.5);transition:.15s}
+  .topic.done .check{background:var(--teal);border-color:var(--teal)}
+  .topic.done .check svg{opacity:1;transform:scale(1)}
+  .tmain{flex:1;min-width:0}
+  .thead{display:flex;gap:9px;align-items:baseline}
+  .tnum{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--wk);flex:0 0 auto}
+  .ttitle{font-size:15.5px;color:var(--ink);font-weight:500}
+  .topic.done .ttitle{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--line)}
+  .discmini{font-size:11px;color:var(--ink-faint);margin-left:auto;white-space:nowrap;padding-top:1px}
+
+  .bibToggle{margin:8px 0 0;font-size:12.5px;color:var(--teal);font-weight:600;
+    background:none;border:none;padding:4px 0;cursor:pointer;display:inline-flex;
+    align-items:center;gap:5px;-webkit-tap-highlight-color:transparent}
+  .bibToggle .bdot{width:6px;height:6px;border-radius:50%;background:var(--coral);opacity:0}
+  .bibToggle.has .bdot{opacity:1}
+  .bibWrap{display:none;margin-top:8px}
+  .bibWrap.show{display:block}
+
+  /* Resource list */
+  .reslist{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+  .resitem{display:flex;align-items:center;gap:10px;border:1px solid var(--line);
+    border-radius:10px;padding:8px 10px;background:var(--card-soft);transition:.12s}
+  .resitem:hover{border-color:var(--teal)}
+  .res-ic{flex:0 0 auto;width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+    color:#fff;background:var(--ink-faint)}
+  .res-ic.link{background:var(--teal)}
+  .res-ic.yt{background:#e0402e}
+  .res-ic.note{background:var(--ink-faint)}
+  .res-body{flex:1;min-width:0}
+  .res-a{display:block;font-size:14.5px;color:var(--ink);font-weight:500;text-decoration:none;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  a.res-a:hover{color:var(--teal);text-decoration:underline}
+  .res-sub{font-size:11px;color:var(--ink-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    font-family:"IBM Plex Mono",monospace;margin-top:1px}
+  .res-open{flex:0 0 auto;color:var(--ink-faint)}
+  .res-del,.res-edit{flex:0 0 auto;width:26px;height:26px;border-radius:7px;border:none;background:none;
+    color:var(--ink-faint);cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
+  .res-del:hover{color:var(--coral);background:rgba(226,104,63,.1)}
+  .res-edit:hover{color:var(--teal);background:var(--teal-wash)}
+  .res-editrow{display:flex;gap:6px;width:100%}
+  .res-editrow input{flex:1;min-width:0;border:1px solid var(--teal);border-radius:9px;padding:8px 10px;
+    font-family:inherit;font-size:14px;color:var(--ink);background:var(--card)}
+  .res-editrow input:focus{outline:none;box-shadow:0 0 0 3px var(--teal-wash)}
+  .res-editrow button{flex:0 0 auto;border:none;background:var(--teal);color:#fff;font-weight:600;
+    font-size:13px;border-radius:9px;padding:0 14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .resadd{display:flex;gap:6px}
+  .resadd input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:9px 11px;
+    font-family:inherit;font-size:13.5px;color:var(--ink);background:var(--card)}
+  .resadd input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
+  .resadd input::placeholder{color:var(--ink-faint)}
+  .resadd button{flex:0 0 auto;border:none;background:var(--teal);color:#fff;font-weight:600;
+    font-size:13px;border-radius:10px;padding:0 16px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .resadd button:hover{background:var(--teal-deep)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .chip{font-size:11.5px;color:var(--teal-deep);background:var(--teal-wash);
+    border:1px solid rgba(15,113,104,.18);border-radius:999px;padding:4px 10px;
+    cursor:pointer;-webkit-tap-highlight-color:transparent;transition:.12s}
+  .chip:hover,.chip:active{filter:brightness(.95)}
+  .chip::before{content:"+ ";opacity:.55}
+  .saved{font-size:11px;color:var(--ink-faint);margin-top:6px;height:14px;
+    font-family:"IBM Plex Mono",monospace;letter-spacing:.02em}
+
+  /* Bibliografía view */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .filters input[type="search"]{flex:1;min-width:160px;border:1px solid var(--line);
+    border-radius:10px;padding:9px 12px;font-size:13.5px;background:var(--card);color:var(--ink)}
+  .filters select{border:1px solid var(--line);border-radius:10px;padding:9px 10px;
+    font-size:13px;background:var(--card);color:var(--ink)}
+  .filters label.chk{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:10px;padding:0 10px;background:var(--card)}
+  .biblist .topic{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+    margin-bottom:8px;padding:13px 14px}
+  .biblist .topic::before{content:none}
+  .emptyState{text-align:center;padding:40px 20px;color:var(--ink-faint);font-size:13.5px}
+
+  footer{margin:30px 4px 0;color:var(--ink-faint);font-size:12px;line-height:1.6}
+  .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .tbtn{font-size:12.5px;color:var(--ink-soft);background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:8px 13px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent}
+  .tbtn:hover{border-color:var(--teal);color:var(--teal-deep)}
+
+  /* Modal */
+  .overlay{position:fixed;inset:0;background:rgba(10,16,14,.45);backdrop-filter:blur(2px);
+    display:none;align-items:flex-end;justify-content:center;z-index:50}
+  .overlay.show{display:flex}
+  .modal{background:var(--card);border:1px solid var(--line);border-radius:18px 18px 0 0;
+    max-width:480px;width:100%;padding:20px 20px calc(20px + env(safe-area-inset-bottom));
+    box-shadow:0 -8px 30px rgba(0,0,0,.2);max-height:86vh;overflow:auto}
+  @media (min-width:600px){
+    .overlay{align-items:center}
+    .modal{border-radius:18px;margin:20px}
+  }
+  .modal h3{font-family:"Fraunces",serif;font-size:18px;margin:0 0 4px}
+  .modal .mdesc{font-size:12.5px;color:var(--ink-soft);margin:0 0 16px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:5px}
+  .field input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 11px;
+    font-size:13.5px;background:var(--card-soft);color:var(--ink)}
+  .field input:focus{outline:none;border-color:var(--teal)}
+  .modal-actions{display:flex;gap:10px;margin-top:16px}
+  .btn{flex:1;text-align:center;font-size:13.5px;font-weight:600;border-radius:10px;
+    padding:10px;cursor:pointer;border:1px solid var(--line);background:var(--card-soft);color:var(--ink-soft)}
+  .btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+  .modal-close{position:absolute;top:14px;right:14px}
+  .note-full{font-size:15px;line-height:1.6;color:var(--ink);white-space:pre-wrap;word-break:break-word;
+    margin:0;max-height:64vh;overflow-y:auto;padding-right:4px}
+
+  /* Custom date picker */
+  .dp{border:1px solid var(--line);border-radius:14px;background:var(--card-soft);padding:12px 12px 10px}
+  .dp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .dp-month{font-family:"Fraunces",serif;font-size:15px;font-weight:600;text-transform:capitalize}
+  .dp-nav{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--card);
+    color:var(--ink-soft);display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .dp-nav:hover{color:var(--teal);border-color:var(--teal)}
+  .dp-dows{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px}
+  .dp-dows span{text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    color:var(--ink-faint);font-weight:600;padding:4px 0}
+  .dp-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+  .dp-cell{aspect-ratio:1;display:grid;place-items:center;font-size:13px;border-radius:9px;
+    cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:.12s;border:1px solid transparent}
+  .dp-cell:hover{background:var(--teal-wash)}
+  .dp-cell.muted{color:var(--ink-faint);opacity:.5}
+  .dp-cell.today{border-color:var(--teal)}
+  .dp-cell.sel{background:var(--teal);color:#fff;font-weight:600}
+  .dp-cell.sel:hover{background:var(--teal)}
+  .dp-selected{margin-top:10px;font-size:12px;color:var(--ink-soft);text-align:center}
+  .dp-selected b{color:var(--teal-deep);font-weight:600}
+
+  /* Toast */
+  .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));
+    transform:translateX(-50%) translateY(20px);z-index:80;
+    display:flex;align-items:center;gap:10px;
+    background:var(--card);color:var(--ink);border:1px solid var(--line);
+    border-radius:12px;padding:11px 15px;box-shadow:0 8px 30px rgba(0,0,0,.18);
+    font-size:13.5px;font-weight:500;max-width:calc(100vw - 32px);
+    opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .tind{flex:0 0 auto;display:inline-flex;align-items:center}
+  .toast .tdot{width:9px;height:9px;border-radius:50%;background:var(--ink-faint)}
+  .toast.success .tdot{background:#2ea36b}
+  .toast.error .tdot{background:var(--coral)}
+  /* mini electrocardiograma */
+  .ecg-mini{width:72px;height:20px;overflow:visible}
+  .ecg-mini path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .ecg-mini .base{stroke:var(--line);stroke-width:1.4}
+  .ecg-mini .pulse{stroke:var(--pulse);stroke-width:2.2;
+    animation:ecgdraw 2.4s ease-in-out infinite}
+  @keyframes ecgdraw{
+    0%{stroke-dashoffset:var(--len)}
+    60%{stroke-dashoffset:0}
+    100%{stroke-dashoffset:calc(var(--len) * -1)}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    /* el ECG de carga es feedback funcional: se mantiene animado */
+    .ecg-mini .pulse{animation:ecgdraw 2.4s ease-in-out infinite!important}
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand"><span class="dotmark"></span><span class="blabel">Plan Residencia</span></div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-view="dash">Dashboard</button>
+      <button class="tab" data-view="plan">Plan</button>
+      <button class="tab" data-view="biblio">Bibliografía</button>
+    </nav>
+    <button class="iconbtn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="themeIcon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M19.07 19.07l-1.41-1.41M6.34 6.34 4.93 4.93"/></svg>
+    </button>
+    <button class="iconbtn" id="settingsBtn" title="Ajustes" aria-label="Ajustes">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero-head">
+    <p class="eyebrow">Prueba Única · Residencias Médicas</p>
+    <h1>Plan de estudio en <em>24 semanas</em></h1>
+    <p class="sub">71 temas del temario oficial, repartidos por disciplina. Marcá lo estudiado y guardá la bibliografía de cada tema.</p>
+  </header>
+
+  <!-- ---------------- DASHBOARD ---------------- -->
+  <section class="view active" id="view-dash">
+    <div class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="hero-pct"><span id="pctNum">0</span><sup>%</sup></div>
+          <div class="hero-pctlabel">Estudiado</div>
+        </div>
+        <div class="hero-badges">
+          <span class="hero-badge"><b id="doneN">0</b> / 71 temas</span>
+          <span class="hero-badge"><b id="bibN">0</b> con bibliografía</span>
+          <span class="hero-badge week" id="daysLeft">Definí tu fecha de inicio</span>
+        </div>
+      </div>
+      <div class="hero-ecg-wrap">
+        <svg class="hero-ecg" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+          <path class="base" id="ecgBase"></path>
+          <path class="fill" id="ecgFill"></path>
+          <circle class="blip" id="ecgBlip" r="3" cx="0" cy="62"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile"><div class="tval" id="tileDone">0</div><div class="tlab">Temas estudiados</div></div>
+      <div class="tile"><div class="tval" id="tilePend">71</div><div class="tlab">Pendientes</div></div>
+      <div class="tile"><div class="tval" id="tileDisc">0/8</div><div class="tlab">Disciplinas completas</div></div>
+      <div class="tile"><div class="tval" id="tileWeek">—</div><div class="tlab">Semana actual del plan</div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Semana en curso <span class="tag" id="thisWeekTag">SEM. —</span></h2>
+      <div id="thisWeekList"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Avance por disciplina</h2>
+      <div class="discbars" id="discBars"></div>
+    </div>
+  </section>
+
+  <!-- ---------------- PLAN ---------------- -->
+  <section class="view" id="view-plan">
+    <div class="legend" id="legend"></div>
+    <div id="weeks"></div>
+    <div class="tools">
+      <button class="tbtn" id="expandAll">Abrir todas</button>
+      <button class="tbtn" id="collapseAll">Cerrar todas</button>
+    </div>
+  </section>
+
+  <!-- ---------------- BIBLIOGRAFÍA ---------------- -->
+  <section class="view" id="view-biblio">
+    <div class="filters">
+      <input type="search" id="bibSearch" placeholder="Buscar tema…">
+      <select id="bibDisc"><option value="">Todas las disciplinas</option></select>
+      <label class="chk"><input type="checkbox" id="bibPendingOnly"> Sin bibliografía</label>
+    </div>
+    <div class="biblist" id="biblist"></div>
+    <div class="tools">
+      <button class="tbtn" id="exportBtn">Exportar bibliografía</button>
+    </div>
+  </section>
+
+  <footer>
+    <p id="syncStatus" style="font-family:'IBM Plex Mono',monospace;font-size:11px"></p>
+    <p style="margin-top:8px">Temario oficial de la Comisión de Instrumentación de la prueba de ingreso a las Residencias Médicas (Facultad de Medicina, UdelaR). Las sugerencias de bibliografía son orientativas y editables.</p>
+  </footer>
+</div>
+
+<!-- Settings modal -->
+<div class="overlay" id="settingsOverlay">
+  <div class="modal">
+    <button class="iconbtn modal-close" id="closeSettings" aria-label="Cerrar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3>Ajustes</h3>
+    <p class="mdesc">Sincronización entre dispositivos y fecha de inicio del plan.</p>
+
+    <div class="field">
+      <label for="syncUrl">URL de la Web App (Google Apps Script)</label>
+      <input type="text" id="syncUrl" placeholder="https://script.google.com/macros/s/…/exec">
+    </div>
+    <div class="field">
+      <label for="syncToken">Token</label>
+      <input type="text" id="syncToken" placeholder="tu clave">
+    </div>
+    <div class="modal-actions">
+      <button class="btn primary" id="saveSyncBtn">Guardar y sincronizar</button>
+    </div>
+    <p class="saved" id="modalSyncStatus" style="margin-top:8px"></p>
+
+    <div class="field" style="margin-top:18px">
+      <label>Fecha de inicio del plan</label>
+      <div class="dp" id="datePicker">
+        <div class="dp-head">
+          <button class="dp-nav" id="dpPrev" aria-label="Mes anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <div class="dp-month" id="dpMonth">—</div>
+          <button class="dp-nav" id="dpNext" aria-label="Mes siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+        <div class="dp-dows"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+        <div class="dp-grid" id="dpGrid"></div>
+        <div class="dp-selected" id="dpSelected">Ninguna fecha seleccionada</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn primary" id="saveStartBtn">Guardar fecha</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="tind" id="toastInd"></span><span id="toastMsg"></span></div>
+
+<!-- Note viewer modal -->
+<div class="overlay" id="noteOverlay">
+  <div class="modal">
+    <button class="iconbtn modal-close" id="closeNote" aria-label="Cerrar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3>Nota</h3>
+    <p class="note-full" id="noteFull"></p>
+  </div>
+</div>
+
+<script>
+const DISC = {
+  pn:  {name:"Medicina del Primer Nivel",  color:"#0f7168", refs:["Guías clínicas MSP Uruguay","Medicina Familiar y Comunitaria (UdelaR)"]},
+  ped: {name:"Pediatría",                  color:"#d1892f", refs:["Nelson. Tratado de Pediatría","Cátedra de Pediatría (UdelaR)"]},
+  gin: {name:"Ginecotocología y Neonatología", color:"#c05a72", refs:["Williams. Obstetricia","Ginecología (Pérez Sánchez)"]},
+  cm:  {name:"Clínica Médica",             color:"#3f6fb0", refs:["Harrison. Medicina Interna","Farreras–Rozman"]},
+  sm:  {name:"Salud Mental",               color:"#7a6cc4", refs:["Kaplan & Sadock. Psiquiatría"]},
+  leg: {name:"Medicina Legal",             color:"#6f7a4e", refs:["Normativa y leyes vigentes (MSP)"]},
+  bio: {name:"Bioética",                   color:"#3f8f7d", refs:["Bioética clínica (UdelaR)"]},
+  qx:  {name:"Clínica Quirúrgica",         color:"#b5563f", refs:["Schwartz. Principios de Cirugía","Sabiston. Tratado de Cirugía"]},
+};
+
+const T = {
+1:"Cardiopatía isquémica y riesgo cardiovascular",2:"Diabetes Mellitus",3:"Tabaquismo. Consejería y entrevista motivacional",4:"Violencia doméstica",5:"Cefaleas. Signos de alarma",6:"Patología osteoarticular. Esguinces, luxaciones, dolor frecuente",7:"Litiasis renal, uropatía obstructiva e HPB",8:"Patologías oftalmológicas frecuentes. Ojo rojo",9:"Problemas gastroenterológicos prevalentes",10:"Infecciones de transmisión sexual. VIH",
+11:"Crecimiento y desarrollo. Estado nutricional",12:"Control en salud. Pesquisa neonatal. Vacunas",13:"Síndromes febriles agudos. Inmunoprevenibles",14:"Infecciones del sistema nervioso central",15:"Infecciones respiratorias agudas (pediatría)",16:"Gastroenteritis aguda. Trastornos hidroelectrolíticos",17:"Infecciones de piel, tejidos blandos e ITU",18:"Crisis epilépticas. Estado de mal epiléptico",19:"Anemias (pediatría)",20:"Derechos de NNA. Maltrato y abuso infantil",
+21:"Tamizaje del cáncer génito-mamario",22:"Abdomen agudo de origen ginecológico",23:"Anticoncepción",24:"Metrorragias no gravídicas",25:"ETS e infecciones genitales bajas",26:"Metrorragias de la primera mitad del embarazo",27:"IVE y reducción de riesgo (ley SSR)",28:"Prematurez. APP, RPM, parto de pretérmino",29:"Control del embarazo",30:"Urgencias obstétricas",31:"Trabajo de parto y parto vaginal",32:"Atención inmediata del recién nacido",33:"Asfixia perinatal y reanimación neonatal",34:"Violencia de género",
+35:"Insuficiencia cardíaca",36:"Arritmias",37:"Cardiopatía isquémica aguda y crónica",38:"Enfermedad tromboembólica venosa",39:"Infecciones respiratorias agudas y complicaciones",40:"EPOC",41:"Insuficiencia renal aguda y crónica",42:"Ataque cerebrovascular isquémico y hemorrágico",43:"Meningoencefalitis aguda",44:"Diabetes: complicaciones y repercusiones",45:"Anemias (clínica médica)",46:"Hepatitis crónicas y complicaciones",47:"Tuberculosis",48:"Infección por VIH-1",
+49:"Trastornos de ansiedad",50:"Trastornos depresivos",51:"Conductas suicidas",52:"Psicosis agudas y crónicas",53:"Consumo problemático de sustancias",54:"Confusión mental",
+55:"Derechos de los pacientes",56:"Certificado de defunción",57:"Consentimiento informado y voluntad anticipada",
+58:"Competencia de los pacientes y decisiones clínicas",59:"Bioética y final de la vida. Objeción de conciencia",60:"Confidencialidad y privacidad en la relación clínica",
+61:"Enfermedades quirúrgicas de piel y faneras",62:"Hernias y eventraciones",63:"Enfermedad litiásica biliar y complicaciones",64:"Abdomen agudo quirúrgico",65:"Obstrucción neoplásica de vía biliar. Cáncer de páncreas",66:"Cáncer anal y colorrectal",67:"Dolor anal agudo. Patología anal frecuente",68:"Cáncer de esófago y gástrico. Disfagia, ERGE, acalasia",69:"Mastopatía benigna y cáncer de mama",70:"Nódulos y masas de cuello. Patología tiroidea",71:"Politraumatizado grave"
+};
+
+const WEEKS = [
+ {d:"pn",  t:[1,2,3]},   {d:"pn",  t:[4,5,6]},      {d:"pn",  t:[7,8,9,10]},
+ {d:"ped", t:[11,12,13]},{d:"ped", t:[14,15,16]},   {d:"ped", t:[17,18,19,20]},
+ {d:"gin", t:[21,22,23]},{d:"gin", t:[24,25,26]},   {d:"gin", t:[27,28,29]}, {d:"gin", t:[30,31,32]}, {d:"gin", t:[33,34]},
+ {d:"cm",  t:[35,36,37]},{d:"cm",  t:[38,39,40]},   {d:"cm",  t:[41,42,43]}, {d:"cm",  t:[44,45,46]}, {d:"cm",  t:[47,48]},
+ {d:"sm",  t:[49,50,51]},{d:"sm",  t:[52,53,54]},
+ {d:"leg", t:[55,56,57]},{d:"bio", t:[58,59,60]},
+ {d:"qx",  t:[61,62,63]},{d:"qx",  t:[64,65,66]},   {d:"qx",  t:[67,68,69]}, {d:"qx",  t:[70,71]}
+];
+
+const MONTHS=["Mes 1","Mes 1","Mes 1","Mes 1","Mes 2","Mes 2","Mes 2","Mes 2","Mes 3","Mes 3","Mes 3","Mes 3","Mes 4","Mes 4","Mes 4","Mes 4","Mes 5","Mes 5","Mes 5","Mes 5","Mes 6","Mes 6","Mes 6","Mes 6"];
+
+// map topic id -> discipline key, for dashboard/biblio lookups
+const TOPIC_DISC = {};
+WEEKS.forEach(w=>w.t.forEach(id=>TOPIC_DISC[id]=w.d));
+
+// ---------- state / storage ----------
+let state = {}; // id -> {done:bool, bib:string}; state.meta -> {startDate}
+const KEY = "residencia-plan-v1";
+const CFG_KEY = "residencia-plan-sync-cfg";       // {url, token} — por dispositivo
+const THEME_KEY = "residencia-plan-theme";
+
+function getSyncCfg(){
+  try{ return JSON.parse(window.localStorage.getItem(CFG_KEY) || "null"); }catch(e){ return null; }
+}
+function setSyncCfg(cfg){ try{ window.localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); }catch(e){} }
+function setSyncStatus(msg){
+  ["syncStatus","modalSyncStatus"].forEach(id=>{const el=document.getElementById(id); if(el) el.textContent=msg;});
+}
+
+// toast: type = info | success | error ; spinner=true muestra ícono giratorio;
+// sticky=true no se auto-oculta (para estados en progreso).
+let toastTimer=null;
+const ECG_PATH="M0,10 L8,10 L11,4 L14,17 L17,7 L20,10 L30,10 L33,4 L36,17 L39,7 L42,10 L52,10 L55,4 L58,17 L61,7 L64,10 L72,10";
+function showToast(msg,type,opts){
+  opts=opts||{};
+  const t=document.getElementById("toast");
+  const ind=document.getElementById("toastInd");
+  if(opts.ecg){
+    // path repetido: base tenue + pulso rojo que se dibuja en loop
+    ind.innerHTML=`<svg class="ecg-mini" viewBox="0 0 72 20" preserveAspectRatio="none" aria-hidden="true">
+      <path class="base" d="${ECG_PATH}"/>
+      <path class="pulse" d="${ECG_PATH}"/></svg>`;
+    const pulse=ind.querySelector(".pulse");
+    const len=pulse.getTotalLength();
+    pulse.style.setProperty("--len",len);
+    pulse.style.strokeDasharray=len;
+  }else{
+    ind.innerHTML=`<span class="tdot"></span>`;
+  }
+  document.getElementById("toastMsg").textContent=msg;
+  t.className="toast show "+(type||"info");
+  clearTimeout(toastTimer);
+  if(!opts.sticky){
+    toastTimer=setTimeout(()=>{ t.classList.remove("show"); }, opts.duration||2200);
+  }
+}
+function hideToast(){
+  clearTimeout(toastTimer);
+  document.getElementById("toast").classList.remove("show");
+}
+
+function loadLocal(){
+  try{ const raw=window.localStorage.getItem(KEY); if(raw) state=JSON.parse(raw); }catch(e){}
+}
+function saveLocal(){ try{ window.localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+
+async function loadState(){
+  loadLocal();
+  const cfg=getSyncCfg();
+  if(!cfg) return;
+  try{
+    setSyncStatus("Sincronizando…");
+    showToast("Sincronizando…","info",{ecg:true,sticky:true});
+    const res=await fetch(`${cfg.url}?token=${encodeURIComponent(cfg.token)}`);
+    const text=await res.text();
+    if(text==="forbidden") throw new Error("token inválido");
+    const remote=JSON.parse(text);
+    if(remote && typeof remote==="object") state=remote;
+    saveLocal();
+    setSyncStatus("Sincronizado ✓ ("+new Date().toLocaleTimeString()+")");
+    hideToast();
+  }catch(e){
+    const detalle=(e&&(e.name+": "+e.message))||String(e);
+    setSyncStatus("Sin conexión al Sheet — "+detalle);
+    showToast("Sin conexión: "+detalle,"error",{duration:8000});
+  }
+}
+
+let saveTimer=null;
+function scheduleSave(cb){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(async()=>{
+    saveLocal();
+    const cfg=getSyncCfg();
+    if(cfg){
+      try{
+        setSyncStatus("Guardando en Sheet…");
+        showToast("Guardando…","info",{ecg:true,sticky:true});
+        await fetch(`${cfg.url}?token=${encodeURIComponent(cfg.token)}`,{
+          method:"POST",
+          headers:{"Content-Type":"text/plain"},
+          body:JSON.stringify(state)
+        });
+        setSyncStatus("Guardado en Sheet ✓ ("+new Date().toLocaleTimeString()+")");
+        hideToast();
+      }catch(e){
+        setSyncStatus("No se pudo guardar en el Sheet (sin conexión)");
+        showToast("No se pudo guardar — se guardó localmente","error",{duration:3500});
+      }
+    }
+    cb&&cb();
+  }, 400);
+}
+function get(id){ return state[id] || (state[id]={done:false,bib:""}); }
+function getMeta(){ return state.meta || (state.meta={startDate:null}); }
+
+// ---------- theme ----------
+function applyTheme(mode){
+  if(mode){ document.documentElement.setAttribute("data-theme",mode); }
+  else{ document.documentElement.removeAttribute("data-theme"); }
+}
+function currentTheme(){
+  const saved=window.localStorage.getItem(THEME_KEY);
+  if(saved) return saved;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+(function initTheme(){
+  const saved=window.localStorage.getItem(THEME_KEY);
+  if(saved) applyTheme(saved);
+})();
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  const next = currentTheme()==="dark" ? "light" : "dark";
+  window.localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+});
+
+// ---------- tabs ----------
+document.getElementById("tabs").addEventListener("click",e=>{
+  const btn=e.target.closest(".tab"); if(!btn) return;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+  btn.classList.add("active");
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  const view=btn.dataset.view;
+  document.getElementById("view-"+view).classList.add("active");
+  // regenerar la vista de destino con los datos más recientes
+  if(view==="plan") buildWeeks();
+  else if(view==="biblio") renderBiblio();
+  else if(view==="dash") renderDashboard();
+});
+
+// ---------- settings modal ----------
+const overlay=document.getElementById("settingsOverlay");
+document.getElementById("settingsBtn").addEventListener("click",()=>{
+  const cfg=getSyncCfg();
+  document.getElementById("syncUrl").value = cfg?cfg.url:"";
+  document.getElementById("syncToken").value = cfg?cfg.token:"";
+  dpSelected = getMeta().startDate || null;
+  dpView = dpSelected ? new Date(dpSelected+"T00:00:00") : new Date();
+  dpView.setDate(1);
+  renderDatePicker();
+  overlay.classList.add("show");
+});
+
+// ---------- custom date picker ----------
+const MONTH_NAMES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+let dpSelected=null;              // "YYYY-MM-DD"
+let dpView=new Date(); dpView.setDate(1);
+function fmtISO(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function renderDatePicker(){
+  document.getElementById("dpMonth").textContent = MONTH_NAMES[dpView.getMonth()]+" "+dpView.getFullYear();
+  const grid=document.getElementById("dpGrid"); grid.innerHTML="";
+  const year=dpView.getFullYear(), month=dpView.getMonth();
+  const first=new Date(year,month,1);
+  let startDow=(first.getDay()+6)%7;               // lunes = 0
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const daysPrev=new Date(year,month,0).getDate();
+  const todayISO=fmtISO(new Date());
+  for(let i=0;i<42;i++){
+    const cell=document.createElement("div");
+    cell.className="dp-cell";
+    let dnum, cellDate, muted=false;
+    if(i<startDow){ dnum=daysPrev-startDow+1+i; cellDate=new Date(year,month-1,dnum); muted=true; }
+    else if(i>=startDow+daysInMonth){ dnum=i-startDow-daysInMonth+1; cellDate=new Date(year,month+1,dnum); muted=true; }
+    else { dnum=i-startDow+1; cellDate=new Date(year,month,dnum); }
+    const iso=fmtISO(cellDate);
+    cell.textContent=dnum;
+    if(muted) cell.classList.add("muted");
+    if(iso===todayISO) cell.classList.add("today");
+    if(iso===dpSelected) cell.classList.add("sel");
+    cell.addEventListener("click",()=>{ dpSelected=iso;
+      if(muted){ dpView=new Date(cellDate.getFullYear(),cellDate.getMonth(),1); }
+      renderDatePicker();
+    });
+    grid.appendChild(cell);
+    if(i>=startDow+daysInMonth && i>=35 && (i%7===6)) { /* keep grid full */ }
+  }
+  const sel=document.getElementById("dpSelected");
+  if(dpSelected){
+    const d=new Date(dpSelected+"T00:00:00");
+    sel.innerHTML="Inicio: <b>"+d.toLocaleDateString("es",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"</b>";
+  } else sel.textContent="Ninguna fecha seleccionada";
+}
+document.getElementById("dpPrev").addEventListener("click",()=>{ dpView.setMonth(dpView.getMonth()-1); renderDatePicker(); });
+document.getElementById("dpNext").addEventListener("click",()=>{ dpView.setMonth(dpView.getMonth()+1); renderDatePicker(); });
+document.getElementById("closeSettings").addEventListener("click",()=>overlay.classList.remove("show"));
+overlay.addEventListener("click",e=>{ if(e.target===overlay) overlay.classList.remove("show"); });
+
+// note viewer modal
+const noteOverlay=document.getElementById("noteOverlay");
+function openNoteModal(text){ document.getElementById("noteFull").textContent=text; noteOverlay.classList.add("show"); }
+document.getElementById("closeNote").addEventListener("click",()=>noteOverlay.classList.remove("show"));
+noteOverlay.addEventListener("click",e=>{ if(e.target===noteOverlay) noteOverlay.classList.remove("show"); });
+
+document.getElementById("saveSyncBtn").addEventListener("click", async ()=>{
+  const url=document.getElementById("syncUrl").value.trim();
+  const token=document.getElementById("syncToken").value.trim();
+  if(!url || !token){ setSyncStatus("Completá URL y token."); return; }
+  setSyncCfg({url,token});
+  await loadState();
+  renderAll();
+});
+document.getElementById("saveStartBtn").addEventListener("click",()=>{
+  getMeta().startDate = dpSelected || null;
+  scheduleSave(renderDashboard);
+  renderDashboard();
+  overlay.classList.remove("show");
+});
+
+// ---------- shared render helpers ----------
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function checkSVG(){return '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';}
+
+function buildLegend(){
+  const el=document.getElementById("legend");
+  el.innerHTML=Object.entries(DISC).map(([key,d])=>
+    `<button class="lg" data-disc="${key}"><span class="dot" style="background:${d.color}"></span>${d.name}</button>`).join("");
+  el.querySelectorAll(".lg").forEach(b=>b.addEventListener("click",()=>scrollToDisc(b.dataset.disc)));
+}
+function scrollToDisc(key){
+  const target=document.getElementById("disc-"+key);
+  if(!target) return;
+  const topbarH=document.querySelector(".topbar").offsetHeight;
+  const y=target.getBoundingClientRect().top+window.scrollY-topbarH-10;
+  window.scrollTo({top:y,behavior:"smooth"});
+  target.classList.add("flash");
+  setTimeout(()=>target.classList.remove("flash"),900);
+}
+
+function buildWeeks(){
+  const host=document.getElementById("weeks");
+  // recordar qué semanas estaban abiertas para reabrirlas tras reconstruir
+  const openIdx=new Set();
+  Array.from(host.children).forEach((c,idx)=>{ if(c.classList.contains("open")) openIdx.add(idx); });
+  host.innerHTML="";
+  const seen={};
+  WEEKS.forEach((w,i)=>{
+    const disc=DISC[w.d], wn=i+1;
+    const card=document.createElement("div");
+    card.className="week"; card.style.setProperty("--wk",disc.color);
+    if(!seen[w.d]){ card.id="disc-"+w.d; seen[w.d]=true; }   // ancla: 1ª semana de la disciplina
+    card.innerHTML=`
+      <div class="whead">
+        <div class="wnum">Semana ${wn}<small>${MONTHS[i].toUpperCase()}</small></div>
+        <div class="wtitle">
+          <div class="wdisc">${disc.name}</div>
+          <div class="wcount">${w.t.length} temas · nº ${w.t[0]}–${w.t[w.t.length-1]}</div>
+        </div>
+        <div class="wprog"><span class="wpt">0/${w.t.length}</span><span class="mini"><i></i></span></div>
+        <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="body"><div><div class="topics"></div></div></div>`;
+    const topics=card.querySelector(".topics");
+    w.t.forEach(id=>topics.appendChild(buildTopic(id,disc,()=>{refreshWeek(card,w); updateGlobal();})));
+    card.querySelector(".whead").addEventListener("click",()=>card.classList.toggle("open"));
+    if(openIdx.has(i)) card.classList.add("open");
+    host.appendChild(card);
+    refreshWeek(card,w);
+  });
+}
+
+function buildTopic(id,disc,onChange,opts){
+  opts=opts||{};
+  const s=get(id);
+  const el=document.createElement("div");
+  el.className="topic"+(s.done?" done":"");
+  el.innerHTML=`
+    <div class="trow">
+      <div class="check" role="checkbox" aria-checked="${s.done}" tabindex="0">${checkSVG()}</div>
+      <div class="tmain">
+        <div class="thead"><span class="tnum">${String(id).padStart(2,"0")}</span><span class="ttitle">${esc(T[id])}</span>${opts.showDisc?`<span class="discmini">${disc.name}</span>`:""}</div>
+        <button class="bibToggle${s.bib?" has":""}"><span class="bdot"></span></button>
+        <div class="bibWrap${opts.openBib?" show":""}">
+          <div class="reslist"></div>
+          <div class="resadd">
+            <input type="text" placeholder="Pegá un link (web/YouTube) o una nota…">
+            <button type="button">Agregar</button>
+          </div>
+          <div class="saved"></div>
+        </div>
+      </div>
+    </div>`;
+  const check=el.querySelector(".check");
+  const toggleDone=()=>{ s.done=!s.done; el.classList.toggle("done",s.done);
+    check.setAttribute("aria-checked",s.done); scheduleSave(onChange); onChange&&onChange(); };
+  check.addEventListener("click",toggleDone);
+  check.addEventListener("keydown",e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();toggleDone();}});
+
+  const btn=el.querySelector(".bibToggle");
+  const wrap=el.querySelector(".bibWrap");
+  const list=el.querySelector(".reslist");
+  const input=el.querySelector(".resadd input");
+  const addBtn=el.querySelector(".resadd button");
+  const saved=el.querySelector(".saved");
+
+  // items() = array de recursos; cada nota conserva sus saltos de línea internos.
+  // Migra el formato viejo (string con "\n" como separador) la primera vez.
+  function items(){
+    if(!Array.isArray(s.items)){
+      s.items = (s.bib||"").split("\n").map(l=>l.trim()).filter(Boolean);
+    }
+    return s.items;
+  }
+  function setItems(arr){ s.items=arr; s.bib=arr.join("\n"); }
+  function labelBtn(){
+    const n=items().length;
+    btn.classList.toggle("has",n>0);
+    btn.innerHTML=`<span class="bdot"></span>${n>0?("Bibliografía ("+n+")"):"Añadir bibliografía"}`;
+  }
+  function persist(){
+    saved.textContent="Guardando…";
+    scheduleSave(()=>{saved.textContent="Guardado ✓"; onChange&&onChange();
+      setTimeout(()=>{if(saved.textContent==="Guardado ✓")saved.textContent="";},1600);});
+  }
+  function renderList(){
+    const arr=items();
+    list.innerHTML="";
+    arr.forEach((line,idx)=>list.appendChild(resItem(line,idx,arr)));
+    labelBtn();
+  }
+  function resItem(line,idx,arr){
+    const row=document.createElement("div"); row.className="resitem";
+    const info=parseRes(line);
+    row.innerHTML=`
+      <span class="res-ic ${info.type}">${info.icon}</span>
+      <div class="res-body">
+        <${info.url?`a href="${esc(info.url)}" target="_blank" rel="noopener"`:"span"} class="res-a">${esc(info.title)}</${info.url?"a":"span"}>
+        ${info.sub?`<div class="res-sub">${esc(info.sub)}</div>`:""}
+      </div>
+      ${info.url?`<a class="res-open" href="${esc(info.url)}" target="_blank" rel="noopener" title="Abrir"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>`:`<button class="res-edit res-view" title="Ver completo" aria-label="Ver nota completa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>`}
+      <button class="res-edit" title="Editar" aria-label="Editar recurso"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+      <button class="res-del" title="Quitar" aria-label="Quitar recurso"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></button>`;
+    row.querySelector(".res-del").addEventListener("click",()=>{
+      arr.splice(idx,1); setItems(arr); renderList(); persist();
+    });
+    const editBtns=row.querySelectorAll(".res-edit");
+    const viewBtn=row.querySelector(".res-view");
+    if(viewBtn){
+      viewBtn.addEventListener("click",()=>openNoteModal(line));
+      const title=row.querySelector(".res-a");
+      title.style.cursor="pointer";
+      title.addEventListener("click",()=>openNoteModal(line));
+    }
+    // el último .res-edit siempre es el lápiz (editar)
+    editBtns[editBtns.length-1].addEventListener("click",()=>startEdit(row,line,idx,arr,info));
+    return row;
+  }
+  function startEdit(row,line,idx,arr,info){
+    const multiline = !info.url;   // notas → textarea; links → input
+    row.innerHTML=`<div class="res-editrow">
+      ${multiline
+        ? `<textarea rows="4" style="flex:1;min-width:0;border:1px solid var(--teal);border-radius:9px;padding:8px 10px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--card);line-height:1.5;resize:vertical">${esc(line)}</textarea>`
+        : `<input type="text" value="${esc(line)}">`}
+      <button type="button">Guardar</button>
+    </div>`;
+    const inp=row.querySelector(multiline?"textarea":"input");
+    const commit=()=>{
+      const v=inp.value.trim();
+      if(v) arr[idx]=v; else arr.splice(idx,1);
+      setItems(arr); renderList(); persist();
+    };
+    row.querySelector("button").addEventListener("click",commit);
+    inp.addEventListener("keydown",e=>{
+      if(e.key==="Enter" && !multiline){e.preventDefault();commit();}
+      else if(e.key==="Escape"){renderList();}
+    });
+    inp.focus();
+    if(!multiline) inp.select();
+  }
+  function addResource(){
+    const v=input.value.trim();
+    if(!v) return;
+    const arr=items(); arr.push(v); setItems(arr);
+    input.value=""; renderList(); persist(); input.focus();
+  }
+  addBtn.addEventListener("click",addResource);
+  input.addEventListener("keydown",e=>{ if(e.key==="Enter"){e.preventDefault();addResource();} });
+
+  btn.addEventListener("click",()=>{ const open=wrap.classList.toggle("show"); if(open) input.focus(); });
+
+  renderList();
+  return el;
+}
+
+// detecta URL / YouTube / nota y arma la info para render
+function parseRes(raw){
+  let url=null, text=raw;
+  const m=raw.match(/^(https?:\/\/|www\.)\S+$/i);
+  if(m){ url = raw.startsWith("www.") ? "https://"+raw : raw; }
+  const link='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+  const yt='<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>';
+  const note='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
+  if(!url) return {type:"note", icon:note, title:text, sub:"", url:null};
+  let host="", isYT=false;
+  try{ const u=new URL(url); host=u.hostname.replace(/^www\./,"");
+    isYT=/(^|\.)youtube\.com$|(^|\.)youtu\.be$/.test(u.hostname); }catch(e){}
+  return isYT
+    ? {type:"yt",  icon:yt,   title:"Video de YouTube", sub:url.replace(/^https?:\/\//,""), url}
+    : {type:"link",icon:link, title:host||url,          sub:url.replace(/^https?:\/\//,""), url};
+}
+
+function refreshWeek(card,w){
+  const done=w.t.filter(id=>get(id).done).length;
+  card.querySelector(".wpt").textContent=`${done}/${w.t.length}`;
+  card.querySelector(".mini i").style.width=(done/w.t.length*100)+"%";
+}
+
+// ---------- ECG realista (onda P-QRS-T repetida) ----------
+function buildEcgPath(w,h,beats){
+  const mid=h*0.62, bw=w/beats;
+  let d=`M0,${mid.toFixed(1)}`;
+  for(let i=0;i<beats;i++){
+    const b=i*bw, p=(x)=>(b+x*bw).toFixed(1), y=(f)=>(mid+f*h).toFixed(1);
+    d+=` L${p(.10)},${y(0)}`;                                  // baseline
+    d+=` Q${p(.155)},${y(-.11)} ${p(.21)},${y(0)}`;            // onda P
+    d+=` L${p(.30)},${y(0)}`;                                  // segmento PR
+    d+=` L${p(.325)},${y(.07)}`;                               // Q
+    d+=` L${p(.36)},${y(-.55)}`;                               // R (pico alto)
+    d+=` L${p(.40)},${y(.18)}`;                                // S
+    d+=` L${p(.44)},${y(0)}`;                                  // vuelta
+    d+=` L${p(.58)},${y(0)}`;                                  // segmento ST
+    d+=` Q${p(.70)},${y(-.20)} ${p(.82)},${y(0)}`;             // onda T
+    d+=` L${p(1)},${y(0)}`;                                    // baseline final
+  }
+  return d;
+}
+let ecgLen=0;
+function setupEcg(){
+  const base=document.getElementById("ecgBase");
+  const fill=document.getElementById("ecgFill");
+  const d=buildEcgPath(1000,100,7);
+  base.setAttribute("d",d);
+  fill.setAttribute("d",d);
+  ecgLen=fill.getTotalLength();
+  fill.style.strokeDasharray=ecgLen;
+  fill.style.strokeDashoffset=ecgLen;   // arranca vacío
+}
+function updateEcg(pct){
+  const fill=document.getElementById("ecgFill");
+  const blip=document.getElementById("ecgBlip");
+  if(!ecgLen) return;
+  fill.style.strokeDashoffset=ecgLen*(1-pct/100);
+  // punto brillante en el frente del trazo (coordenadas de usuario del viewBox)
+  const pt=fill.getPointAtLength(ecgLen*(pct/100));
+  blip.setAttribute("cx",pt.x.toFixed(1));
+  blip.setAttribute("cy",pt.y.toFixed(1));
+  blip.style.opacity = pct>0 ? "1" : "0";
+}
+
+// ---------- dashboard ----------
+function weekIndexForToday(){
+  const start=getMeta().startDate;
+  if(!start) return null;
+  const s=new Date(start+"T00:00:00");
+  const today=new Date(); today.setHours(0,0,0,0);
+  const diffDays=Math.floor((today-s)/86400000);
+  const idx=Math.floor(diffDays/7);
+  return Math.min(Math.max(idx,0),WEEKS.length-1);
+}
+function daysRemaining(){
+  const start=getMeta().startDate;
+  if(!start) return null;
+  const s=new Date(start+"T00:00:00");
+  const end=new Date(s.getTime()+WEEKS.length*7*86400000);
+  const today=new Date(); today.setHours(0,0,0,0);
+  return Math.ceil((end-today)/86400000);
+}
+
+function renderDashboard(){
+  const ids=Object.keys(T);
+  const done=ids.filter(id=>get(id).done).length;
+  const bib=ids.filter(id=>get(id).bib&&get(id).bib.trim()).length;
+  const pct=Math.round(done/ids.length*100);
+
+  document.getElementById("pctNum").textContent=pct;
+  document.getElementById("doneN").textContent=done;
+  document.getElementById("bibN").textContent=bib;
+  document.getElementById("tileDone").textContent=done;
+  document.getElementById("tilePend").textContent=ids.length-done;
+
+  const discComplete=Object.keys(DISC).filter(dk=>{
+    const topicIds=WEEKS.filter(w=>w.d===dk).flatMap(w=>w.t);
+    return topicIds.every(id=>get(id).done);
+  }).length;
+  document.getElementById("tileDisc").textContent=`${discComplete}/${Object.keys(DISC).length}`;
+
+  // ECG fill según progreso
+  updateEcg(pct);
+
+  // días restantes / semana actual
+  const wIdx=weekIndexForToday();
+  const days=daysRemaining();
+  const daysEl=document.getElementById("daysLeft");
+  if(wIdx===null){
+    daysEl.textContent="Definí tu fecha de inicio";
+  } else if(days>0){
+    daysEl.textContent=`SEM. ${wIdx+1}/24 · ${days} días`;
+  } else {
+    daysEl.textContent=`SEM. ${wIdx+1}/24 · completado`;
+  }
+  document.getElementById("tileWeek").textContent = wIdx===null ? "—" : (wIdx+1);
+
+  // esta semana: primera con temas pendientes (o la última si está todo hecho)
+  const twTag=document.getElementById("thisWeekTag");
+  const twList=document.getElementById("thisWeekList");
+  const firstPending=WEEKS.findIndex(w=>w.t.some(id=>!get(id).done));
+  const allDone=firstPending===-1;
+  const useIdx = allDone ? WEEKS.length-1 : firstPending;
+  const w=WEEKS[useIdx]; const disc=DISC[w.d];
+  twTag.textContent = allDone ? "COMPLETO" : "SEM. "+(useIdx+1);
+  twList.innerHTML="";
+  w.t.forEach(id=>{
+    const s=get(id);
+    const row=document.createElement("div");
+    row.className="weekrow-mini"+(s.done?" done":"");
+    row.innerHTML=`<span class="wm-num">${String(id).padStart(2,"0")}</span>
+      <span class="wm-title">${esc(T[id])}</span>
+      <div class="wm-check">${s.done?checkSVG():""}</div>`;
+    row.querySelector(".wm-check").addEventListener("click",()=>{
+      s.done=!s.done; scheduleSave(renderDashboard); renderDashboard();
+    });
+    twList.appendChild(row);
+  });
+
+  // barras por disciplina
+  const barsHost=document.getElementById("discBars");
+  barsHost.innerHTML="";
+  Object.entries(DISC).forEach(([key,d])=>{
+    const topicIds=WEEKS.filter(w=>w.d===key).flatMap(w=>w.t);
+    const doneN=topicIds.filter(id=>get(id).done).length;
+    const p=Math.round(doneN/topicIds.length*100);
+    const row=document.createElement("div");
+    row.className="dbar-row";
+    row.innerHTML=`<span class="dbar-name">${d.name}</span>
+      <span class="dbar-track"><span class="dbar-fill" style="width:${p}%;background:${d.color}"></span></span>
+      <span class="dbar-pct">${p}%</span>`;
+    barsHost.appendChild(row);
+  });
+}
+
+function updateGlobal(){ renderDashboard(); }
+
+// ---------- bibliografía view ----------
+function populateBibDiscSelect(){
+  const sel=document.getElementById("bibDisc");
+  Object.entries(DISC).forEach(([key,d])=>{
+    const o=document.createElement("option"); o.value=key; o.textContent=d.name; sel.appendChild(o);
+  });
+}
+function renderBiblio(){
+  const host=document.getElementById("biblist");
+  const q=(document.getElementById("bibSearch").value||"").toLowerCase().trim();
+  const discFilter=document.getElementById("bibDisc").value;
+  const pendingOnly=document.getElementById("bibPendingOnly").checked;
+  host.innerHTML="";
+  let shown=0;
+  Object.keys(T).forEach(idStr=>{
+    const id=Number(idStr);
+    const dk=TOPIC_DISC[id]; const disc=DISC[dk];
+    if(discFilter && dk!==discFilter) return;
+    if(q && !T[id].toLowerCase().includes(q)) return;
+    if(pendingOnly && get(id).bib && get(id).bib.trim()) return;
+    shown++;
+    host.appendChild(buildTopic(id,disc,()=>{ updateGlobal(); }, {showDisc:true}));
+  });
+  if(!shown) host.innerHTML=`<div class="emptyState">No hay temas que coincidan con el filtro.</div>`;
+}
+["bibSearch","bibDisc","bibPendingOnly"].forEach(id=>{
+  document.getElementById(id).addEventListener("input",renderBiblio);
+  document.getElementById(id).addEventListener("change",renderBiblio);
+});
+
+// ---------- plan tools ----------
+document.getElementById("expandAll").onclick=()=>document.querySelectorAll(".week").forEach(w=>w.classList.add("open"));
+document.getElementById("collapseAll").onclick=()=>document.querySelectorAll(".week").forEach(w=>w.classList.remove("open"));
+document.getElementById("exportBtn").onclick=()=>{
+  let out="PLAN DE ESTUDIO — BIBLIOGRAFÍA\n\n";
+  WEEKS.forEach((w,i)=>{
+    out+=`SEMANA ${i+1} · ${DISC[w.d].name}\n`;
+    w.t.forEach(id=>{const s=get(id);
+      out+=`  ${String(id).padStart(2,"0")}. ${T[id]}${s.done?"  [estudiado]":""}\n`;
+      if(s.bib&&s.bib.trim()) out+=s.bib.split("\n").map(l=>"      - "+l).join("\n")+"\n";
+    });
+    out+="\n";
+  });
+  navigator.clipboard?.writeText(out).then(
+    ()=>alert("Bibliografía copiada al portapapeles."),
+    ()=>alert(out.slice(0,1200))
+  );
+};
+
+function renderAll(){
+  buildLegend();
+  buildWeeks();
+  renderBiblio();
+  renderDashboard();
+}
+
+(async function init(){
+  await loadState();
+  populateBibDiscSelect();
+  setupEcg();
+  renderAll();
+})();
+</script>
