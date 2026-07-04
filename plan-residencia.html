@@ -584,9 +584,8 @@ async function loadState(){
     setSyncStatus("Sincronizado ✓ ("+new Date().toLocaleTimeString()+")");
     hideToast();
   }catch(e){
-    const detalle=(e&&(e.name+": "+e.message))||String(e);
-    setSyncStatus("Sin conexión al Sheet — "+detalle);
-    showToast("Sin conexión: "+detalle,"error",{duration:8000});
+    setSyncStatus("Sin conexión al Sheet — usando copia local");
+    showToast("Sin conexión — usando copia local","error");
   }
 }
 
