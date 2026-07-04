@@ -48,7 +48,6 @@
   }
   .wrap{width:100%;max-width:840px;margin:0 auto;padding:0 16px 90px}
 
-  /* Top bar */
   .topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--paper) 88%, transparent);
     backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);padding:12px 16px;margin:0 -16px 22px}
@@ -66,7 +65,7 @@
     background:var(--card-soft);display:grid;place-items:center;cursor:pointer;color:var(--ink-soft);
     -webkit-tap-highlight-color:transparent}
   .iconbtn:hover{color:var(--teal);border-color:var(--teal)}
-  /* barra responsive: en pantallas chicas la marca desaparece y las pestañas se achican */
+  
   @media (max-width:560px){
     .topbar-in{gap:8px}
     .blabel{display:none}
@@ -90,7 +89,6 @@
   .view.active{display:block;animation:fadein .25s ease}
   @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 
-  /* ---- Dashboard ---- */
   .hero{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     box-shadow:var(--shadow);padding:22px 22px 0;overflow:hidden;margin-bottom:16px}
   .hero-row{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
@@ -145,7 +143,6 @@
   .dbar-fill{height:100%;border-radius:4px;transition:width .4s ease}
   .dbar-pct{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);width:32px;text-align:right}
 
-  /* Legend */
   .legend{display:flex;gap:7px 8px;flex-wrap:wrap;margin:0 4px 16px}
   .lg{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);
     font-family:inherit;background:var(--card);border:1px solid var(--line);border-radius:999px;
@@ -156,7 +153,6 @@
   @keyframes flashwk{0%,100%{box-shadow:var(--shadow)}
     30%{box-shadow:0 0 0 3px var(--teal-wash),var(--shadow)}}
 
-  /* Week card (Plan) */
   .week{position:relative;background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
   .week::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--wk,#ccc)}
@@ -181,7 +177,6 @@
   .body>div{overflow:hidden}
   .topics{padding:2px 16px 14px}
 
-  /* Topic */
   .topic{border-top:1px solid var(--line);padding:13px 2px 3px}
   .trow{display:flex;align-items:flex-start;gap:12px}
   .check{flex:0 0 auto;width:22px;height:22px;border-radius:7px;border:1.8px solid var(--line);
@@ -206,7 +201,6 @@
   .bibWrap{display:none;margin-top:8px}
   .bibWrap.show{display:block}
 
-  /* Resource list */
   .reslist{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
   .resitem{display:flex;align-items:center;gap:10px;border:1px solid var(--line);
     border-radius:10px;padding:8px 10px;background:var(--card-soft);transition:.12s}
@@ -250,7 +244,6 @@
   .saved{font-size:11px;color:var(--ink-faint);margin-top:6px;height:14px;
     font-family:"IBM Plex Mono",monospace;letter-spacing:.02em}
 
-  /* Bibliografía view */
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
   .filters input[type="search"]{flex:1;min-width:160px;border:1px solid var(--line);
     border-radius:10px;padding:9px 12px;font-size:13.5px;background:var(--card);color:var(--ink)}
@@ -270,7 +263,6 @@
     -webkit-tap-highlight-color:transparent}
   .tbtn:hover{border-color:var(--teal);color:var(--teal-deep)}
 
-  /* Modal */
   .overlay{position:fixed;inset:0;background:rgba(10,16,14,.45);backdrop-filter:blur(2px);
     display:none;align-items:flex-end;justify-content:center;z-index:50}
   .overlay.show{display:flex}
@@ -296,7 +288,6 @@
   .note-full{font-size:15px;line-height:1.6;color:var(--ink);white-space:pre-wrap;word-break:break-word;
     margin:0;max-height:64vh;overflow-y:auto;padding-right:4px}
 
-  /* Custom date picker */
   .dp{border:1px solid var(--line);border-radius:14px;background:var(--card-soft);padding:12px 12px 10px}
   .dp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
   .dp-month{font-family:"Fraunces",serif;font-size:15px;font-weight:600;text-transform:capitalize}
@@ -317,7 +308,6 @@
   .dp-selected{margin-top:10px;font-size:12px;color:var(--ink-soft);text-align:center}
   .dp-selected b{color:var(--teal-deep);font-weight:600}
 
-  /* Toast */
   .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));
     transform:translateX(-50%) translateY(20px);z-index:80;
     display:flex;align-items:center;gap:10px;
@@ -330,7 +320,7 @@
   .toast .tdot{width:9px;height:9px;border-radius:50%;background:var(--ink-faint)}
   .toast.success .tdot{background:#2ea36b}
   .toast.error .tdot{background:var(--coral)}
-  /* mini electrocardiograma */
+  
   .ecg-mini{width:72px;height:20px;overflow:visible}
   .ecg-mini path{fill:none;stroke-linecap:round;stroke-linejoin:round}
   .ecg-mini .base{stroke:var(--line);stroke-width:1.4}
@@ -344,7 +334,7 @@
 
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important}
-    /* el ECG de carga es feedback funcional: se mantiene animado */
+    
     .ecg-mini .pulse{animation:ecgdraw 2.4s ease-in-out infinite!important}
   }
 </style>
@@ -373,7 +363,6 @@
     <p class="sub">71 temas del temario oficial, repartidos por disciplina. Marcá lo estudiado y guardá la bibliografía de cada tema.</p>
   </header>
 
-  <!-- ---------------- DASHBOARD ---------------- -->
   <section class="view active" id="view-dash">
     <div class="hero">
       <div class="hero-row">
@@ -414,7 +403,6 @@
     </div>
   </section>
 
-  <!-- ---------------- PLAN ---------------- -->
   <section class="view" id="view-plan">
     <div class="legend" id="legend"></div>
     <div id="weeks"></div>
@@ -424,7 +412,6 @@
     </div>
   </section>
 
-  <!-- ---------------- BIBLIOGRAFÍA ---------------- -->
   <section class="view" id="view-biblio">
     <div class="filters">
       <input type="search" id="bibSearch" placeholder="Buscar tema…">
@@ -443,7 +430,6 @@
   </footer>
 </div>
 
-<!-- Settings modal -->
 <div class="overlay" id="settingsOverlay">
   <div class="modal">
     <button class="iconbtn modal-close" id="closeSettings" aria-label="Cerrar">
@@ -486,7 +472,6 @@
 
 <div class="toast" id="toast"><span class="tind" id="toastInd"></span><span id="toastMsg"></span></div>
 
-<!-- Note viewer modal -->
 <div class="overlay" id="noteOverlay">
   <div class="modal">
     <button class="iconbtn modal-close" id="closeNote" aria-label="Cerrar">
@@ -532,14 +517,12 @@ const WEEKS = [
 
 const MONTHS=["Mes 1","Mes 1","Mes 1","Mes 1","Mes 2","Mes 2","Mes 2","Mes 2","Mes 3","Mes 3","Mes 3","Mes 3","Mes 4","Mes 4","Mes 4","Mes 4","Mes 5","Mes 5","Mes 5","Mes 5","Mes 6","Mes 6","Mes 6","Mes 6"];
 
-// map topic id -> discipline key, for dashboard/biblio lookups
 const TOPIC_DISC = {};
 WEEKS.forEach(w=>w.t.forEach(id=>TOPIC_DISC[id]=w.d));
 
-// ---------- state / storage ----------
-let state = {}; // id -> {done:bool, bib:string}; state.meta -> {startDate}
+let state = {}; 
 const KEY = "residencia-plan-v1";
-const CFG_KEY = "residencia-plan-sync-cfg";       // {url, token} — por dispositivo
+const CFG_KEY = "residencia-plan-sync-cfg";       
 const THEME_KEY = "residencia-plan-theme";
 
 function getSyncCfg(){
@@ -550,8 +533,6 @@ function setSyncStatus(msg){
   ["syncStatus","modalSyncStatus"].forEach(id=>{const el=document.getElementById(id); if(el) el.textContent=msg;});
 }
 
-// toast: type = info | success | error ; spinner=true muestra ícono giratorio;
-// sticky=true no se auto-oculta (para estados en progreso).
 let toastTimer=null;
 const ECG_PATH="M0,10 L8,10 L11,4 L14,17 L17,7 L20,10 L30,10 L33,4 L36,17 L39,7 L42,10 L52,10 L55,4 L58,17 L61,7 L64,10 L72,10";
 function showToast(msg,type,opts){
@@ -559,7 +540,7 @@ function showToast(msg,type,opts){
   const t=document.getElementById("toast");
   const ind=document.getElementById("toastInd");
   if(opts.ecg){
-    // path repetido: base tenue + pulso rojo que se dibuja en loop
+    
     ind.innerHTML=`<svg class="ecg-mini" viewBox="0 0 72 20" preserveAspectRatio="none" aria-hidden="true">
       <path class="base" d="${ECG_PATH}"/>
       <path class="pulse" d="${ECG_PATH}"/></svg>`;
@@ -637,7 +618,6 @@ function scheduleSave(cb){
 function get(id){ return state[id] || (state[id]={done:false,bib:""}); }
 function getMeta(){ return state.meta || (state.meta={startDate:null}); }
 
-// ---------- theme ----------
 function applyTheme(mode){
   if(mode){ document.documentElement.setAttribute("data-theme",mode); }
   else{ document.documentElement.removeAttribute("data-theme"); }
@@ -657,7 +637,6 @@ document.getElementById("themeBtn").addEventListener("click",()=>{
   applyTheme(next);
 });
 
-// ---------- tabs ----------
 document.getElementById("tabs").addEventListener("click",e=>{
   const btn=e.target.closest(".tab"); if(!btn) return;
   document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
@@ -665,13 +644,12 @@ document.getElementById("tabs").addEventListener("click",e=>{
   document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
   const view=btn.dataset.view;
   document.getElementById("view-"+view).classList.add("active");
-  // regenerar la vista de destino con los datos más recientes
+  
   if(view==="plan") buildWeeks();
   else if(view==="biblio") renderBiblio();
   else if(view==="dash") renderDashboard();
 });
 
-// ---------- settings modal ----------
 const overlay=document.getElementById("settingsOverlay");
 document.getElementById("settingsBtn").addEventListener("click",()=>{
   const cfg=getSyncCfg();
@@ -684,9 +662,8 @@ document.getElementById("settingsBtn").addEventListener("click",()=>{
   overlay.classList.add("show");
 });
 
-// ---------- custom date picker ----------
 const MONTH_NAMES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-let dpSelected=null;              // "YYYY-MM-DD"
+let dpSelected=null;              
 let dpView=new Date(); dpView.setDate(1);
 function fmtISO(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function renderDatePicker(){
@@ -694,7 +671,7 @@ function renderDatePicker(){
   const grid=document.getElementById("dpGrid"); grid.innerHTML="";
   const year=dpView.getFullYear(), month=dpView.getMonth();
   const first=new Date(year,month,1);
-  let startDow=(first.getDay()+6)%7;               // lunes = 0
+  let startDow=(first.getDay()+6)%7;               
   const daysInMonth=new Date(year,month+1,0).getDate();
   const daysPrev=new Date(year,month,0).getDate();
   const todayISO=fmtISO(new Date());
@@ -715,7 +692,7 @@ function renderDatePicker(){
       renderDatePicker();
     });
     grid.appendChild(cell);
-    if(i>=startDow+daysInMonth && i>=35 && (i%7===6)) { /* keep grid full */ }
+    if(i>=startDow+daysInMonth && i>=35 && (i%7===6)) {  }
   }
   const sel=document.getElementById("dpSelected");
   if(dpSelected){
@@ -728,7 +705,6 @@ document.getElementById("dpNext").addEventListener("click",()=>{ dpView.setMonth
 document.getElementById("closeSettings").addEventListener("click",()=>overlay.classList.remove("show"));
 overlay.addEventListener("click",e=>{ if(e.target===overlay) overlay.classList.remove("show"); });
 
-// note viewer modal
 const noteOverlay=document.getElementById("noteOverlay");
 function openNoteModal(text){ document.getElementById("noteFull").textContent=text; noteOverlay.classList.add("show"); }
 document.getElementById("closeNote").addEventListener("click",()=>noteOverlay.classList.remove("show"));
@@ -749,7 +725,6 @@ document.getElementById("saveStartBtn").addEventListener("click",()=>{
   overlay.classList.remove("show");
 });
 
-// ---------- shared render helpers ----------
 function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 function checkSVG(){return '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';}
 
@@ -771,7 +746,7 @@ function scrollToDisc(key){
 
 function buildWeeks(){
   const host=document.getElementById("weeks");
-  // recordar qué semanas estaban abiertas para reabrirlas tras reconstruir
+  
   const openIdx=new Set();
   Array.from(host.children).forEach((c,idx)=>{ if(c.classList.contains("open")) openIdx.add(idx); });
   host.innerHTML="";
@@ -780,7 +755,7 @@ function buildWeeks(){
     const disc=DISC[w.d], wn=i+1;
     const card=document.createElement("div");
     card.className="week"; card.style.setProperty("--wk",disc.color);
-    if(!seen[w.d]){ card.id="disc-"+w.d; seen[w.d]=true; }   // ancla: 1ª semana de la disciplina
+    if(!seen[w.d]){ card.id="disc-"+w.d; seen[w.d]=true; }   
     card.innerHTML=`
       <div class="whead">
         <div class="wnum">Semana ${wn}<small>${MONTHS[i].toUpperCase()}</small></div>
@@ -835,8 +810,7 @@ function buildTopic(id,disc,onChange,opts){
   const addBtn=el.querySelector(".resadd button");
   const saved=el.querySelector(".saved");
 
-  // items() = array de recursos; cada nota conserva sus saltos de línea internos.
-  // Migra el formato viejo (string con "\n" como separador) la primera vez.
+  
   function items(){
     if(!Array.isArray(s.items)){
       s.items = (s.bib||"").split("\n").map(l=>l.trim()).filter(Boolean);
@@ -883,12 +857,12 @@ function buildTopic(id,disc,onChange,opts){
       title.style.cursor="pointer";
       title.addEventListener("click",()=>openNoteModal(line));
     }
-    // el último .res-edit siempre es el lápiz (editar)
+    
     editBtns[editBtns.length-1].addEventListener("click",()=>startEdit(row,line,idx,arr,info));
     return row;
   }
   function startEdit(row,line,idx,arr,info){
-    const multiline = !info.url;   // notas → textarea; links → input
+    const multiline = !info.url;   
     row.innerHTML=`<div class="res-editrow">
       ${multiline
         ? `<textarea rows="4" style="flex:1;min-width:0;border:1px solid var(--teal);border-radius:9px;padding:8px 10px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--card);line-height:1.5;resize:vertical">${esc(line)}</textarea>`
@@ -924,7 +898,6 @@ function buildTopic(id,disc,onChange,opts){
   return el;
 }
 
-// detecta URL / YouTube / nota y arma la info para render
 function parseRes(raw){
   let url=null, text=raw;
   const m=raw.match(/^(https?:\/\/|www\.)\S+$/i);
@@ -947,22 +920,21 @@ function refreshWeek(card,w){
   card.querySelector(".mini i").style.width=(done/w.t.length*100)+"%";
 }
 
-// ---------- ECG realista (onda P-QRS-T repetida) ----------
 function buildEcgPath(w,h,beats){
   const mid=h*0.62, bw=w/beats;
   let d=`M0,${mid.toFixed(1)}`;
   for(let i=0;i<beats;i++){
     const b=i*bw, p=(x)=>(b+x*bw).toFixed(1), y=(f)=>(mid+f*h).toFixed(1);
-    d+=` L${p(.10)},${y(0)}`;                                  // baseline
-    d+=` Q${p(.155)},${y(-.11)} ${p(.21)},${y(0)}`;            // onda P
-    d+=` L${p(.30)},${y(0)}`;                                  // segmento PR
-    d+=` L${p(.325)},${y(.07)}`;                               // Q
-    d+=` L${p(.36)},${y(-.55)}`;                               // R (pico alto)
-    d+=` L${p(.40)},${y(.18)}`;                                // S
-    d+=` L${p(.44)},${y(0)}`;                                  // vuelta
-    d+=` L${p(.58)},${y(0)}`;                                  // segmento ST
-    d+=` Q${p(.70)},${y(-.20)} ${p(.82)},${y(0)}`;             // onda T
-    d+=` L${p(1)},${y(0)}`;                                    // baseline final
+    d+=` L${p(.10)},${y(0)}`;                                  
+    d+=` Q${p(.155)},${y(-.11)} ${p(.21)},${y(0)}`;            
+    d+=` L${p(.30)},${y(0)}`;                                  
+    d+=` L${p(.325)},${y(.07)}`;                               
+    d+=` L${p(.36)},${y(-.55)}`;                               
+    d+=` L${p(.40)},${y(.18)}`;                                
+    d+=` L${p(.44)},${y(0)}`;                                  
+    d+=` L${p(.58)},${y(0)}`;                                  
+    d+=` Q${p(.70)},${y(-.20)} ${p(.82)},${y(0)}`;             
+    d+=` L${p(1)},${y(0)}`;                                    
   }
   return d;
 }
@@ -975,21 +947,20 @@ function setupEcg(){
   fill.setAttribute("d",d);
   ecgLen=fill.getTotalLength();
   fill.style.strokeDasharray=ecgLen;
-  fill.style.strokeDashoffset=ecgLen;   // arranca vacío
+  fill.style.strokeDashoffset=ecgLen;   
 }
 function updateEcg(pct){
   const fill=document.getElementById("ecgFill");
   const blip=document.getElementById("ecgBlip");
   if(!ecgLen) return;
   fill.style.strokeDashoffset=ecgLen*(1-pct/100);
-  // punto brillante en el frente del trazo (coordenadas de usuario del viewBox)
+  
   const pt=fill.getPointAtLength(ecgLen*(pct/100));
   blip.setAttribute("cx",pt.x.toFixed(1));
   blip.setAttribute("cy",pt.y.toFixed(1));
   blip.style.opacity = pct>0 ? "1" : "0";
 }
 
-// ---------- dashboard ----------
 function weekIndexForToday(){
   const start=getMeta().startDate;
   if(!start) return null;
@@ -1026,10 +997,8 @@ function renderDashboard(){
   }).length;
   document.getElementById("tileDisc").textContent=`${discComplete}/${Object.keys(DISC).length}`;
 
-  // ECG fill según progreso
   updateEcg(pct);
 
-  // días restantes / semana actual
   const wIdx=weekIndexForToday();
   const days=daysRemaining();
   const daysEl=document.getElementById("daysLeft");
@@ -1042,7 +1011,6 @@ function renderDashboard(){
   }
   document.getElementById("tileWeek").textContent = wIdx===null ? "—" : (wIdx+1);
 
-  // esta semana: primera con temas pendientes (o la última si está todo hecho)
   const twTag=document.getElementById("thisWeekTag");
   const twList=document.getElementById("thisWeekList");
   const firstPending=WEEKS.findIndex(w=>w.t.some(id=>!get(id).done));
@@ -1064,7 +1032,6 @@ function renderDashboard(){
     twList.appendChild(row);
   });
 
-  // barras por disciplina
   const barsHost=document.getElementById("discBars");
   barsHost.innerHTML="";
   Object.entries(DISC).forEach(([key,d])=>{
@@ -1082,7 +1049,6 @@ function renderDashboard(){
 
 function updateGlobal(){ renderDashboard(); }
 
-// ---------- bibliografía view ----------
 function populateBibDiscSelect(){
   const sel=document.getElementById("bibDisc");
   Object.entries(DISC).forEach(([key,d])=>{
@@ -1112,7 +1078,6 @@ function renderBiblio(){
   document.getElementById(id).addEventListener("change",renderBiblio);
 });
 
-// ---------- plan tools ----------
 document.getElementById("expandAll").onclick=()=>document.querySelectorAll(".week").forEach(w=>w.classList.add("open"));
 document.getElementById("collapseAll").onclick=()=>document.querySelectorAll(".week").forEach(w=>w.classList.remove("open"));
 document.getElementById("exportBtn").onclick=()=>{
